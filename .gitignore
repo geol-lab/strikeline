@@ -4,3 +4,4 @@ dist/
 .impeccable/build/
 .impeccable/mocks/
 __pycache__/
+.impeccable/hook.cache.json
