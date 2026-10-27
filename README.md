@@ -1,6 +1,6 @@
 # Strikeline
 
-Tools for structural-geology lab reports, made at NU by geology students: structure contours, strike and dip, cross-sections and stereonets, drawn from your own lab map.
+Tools for structural-geology lab reports, made at NU by students: structure contours, strike and dip, cross-sections and stereonets, drawn from your own lab map.
 
 ## Running it
 
