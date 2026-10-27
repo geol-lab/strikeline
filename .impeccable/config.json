@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-27T15:05:57.777Z",
+        "reason": "Claude: the alternating ink/paper bar is the survey map sheet's graduated neatline, the signature of the map-sheet direction the user chose"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-27T15:08:38.465Z",
+        "reason": "Claude: both hits are false positives — the map-face holds an SVG with its own viewBox margin, and the segmented control's buttons fill their frame with centred labels"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "app.html"
+        ],
+        "createdAt": "2026-10-27T15:36:10.192Z",
+        "reason": "Claude: false positive — section-plate wraps an SVG whose own drawing margins (54px left, 28px right, 30px top) keep every label off the border"
+      }
+    ]
+  }
+}

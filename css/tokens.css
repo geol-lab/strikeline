@@ -1,0 +1,93 @@
+/* ==========================================================================
+   tokens.css — design tokens for Strikeline
+   The page is built like a geological map sheet: cool survey paper,
+   blue-black ink, brown topographic contours, and bed colours taken
+   from the ICS chronostratigraphic chart (the only saturated colour).
+   ========================================================================== */
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../assets/fonts/golos-text-latin-wght-normal.woff2") format("woff2-variations");
+  font-weight: 400 900;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Golos Text";
+  src: url("../assets/fonts/golos-text-cyrillic-wght-normal.woff2") format("woff2-variations");
+  font-weight: 400 900;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../assets/fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2-variations");
+  font-weight: 100 800;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../assets/fonts/jetbrains-mono-cyrillic-wght-normal.woff2") format("woff2-variations");
+  font-weight: 100 800;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+:root {
+  /* Paper and ink */
+  --paper: #f3f5f4;          /* survey sheet */
+  --paper-raised: #fbfcfb;   /* map face, inputs */
+  --paper-sunk: #e7ebe9;     /* margins, hover fills */
+  --ink: #14181d;            /* linework and text */
+  --ink-2: #434d56;          /* secondary text (7.6:1 on paper) */
+  --ink-3: #5f6971;          /* tertiary text (5.1:1 on paper) */
+  --rule: #c3cbc8;           /* hairlines between rows */
+  --rule-strong: #8f9996;
+
+  /* Map conventions */
+  --contour: #a0653a;        /* topographic contours (brown) */
+  --contour-label: #7d4a24;
+  --section-line: #14181d;   /* X–Y, dashed */
+  --accent: #2847a8;         /* links, focus, active controls */
+  --accent-ink: #ffffff;
+
+  /* Beds, oldest → youngest (ICS: Carboniferous, Permian, Triassic, Jurassic) */
+  --bed-1: #3e7f70;  --bed-1-fill: #c3ddd5;
+  --bed-2: #b5432e;  --bed-2-fill: #f3cdc1;
+  --bed-3: #7b3f93;  --bed-3-fill: #ddcbe6;
+  --bed-4: #13809b;  --bed-4-fill: #c4e6ef;
+
+  /* Type */
+  --font-sans: "Golos Text", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: clamp(1.5rem, 1.1rem + 1.4vw, 2.125rem);
+  --text-display: clamp(2.375rem, 1.4rem + 3.6vw, 4.25rem);
+
+  /* Space (4px base) */
+  --s-1: 0.25rem; --s-2: 0.5rem; --s-3: 0.75rem; --s-4: 1rem;
+  --s-5: 1.5rem;  --s-6: 2rem;   --s-7: 3rem;    --s-8: 4.5rem; --s-9: 7rem;
+
+  /* Sheet frame */
+  --sheet-margin: 10px;      /* gap between viewport and neatline */
+  --bar: 3px;                /* graduated border bar */
+  --gutter: 16px;            /* content padding inside the frame */
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --t-fast: 160ms;
+  --t-med: 280ms;
+}
+
+@media (min-width: 720px) {
+  :root { --sheet-margin: 18px; --bar: 6px; --gutter: 32px; }
+}
+@media (min-width: 1100px) {
+  :root { --sheet-margin: 24px; --gutter: 48px; }
+}

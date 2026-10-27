@@ -1,0 +1,638 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-27T15:30:00Z",
+  "title": "Design System: Strikeline",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Blue-Black Survey Ink",
+        "canonical": "oklch(20.7% 0.012 254)",
+        "tonalRamp": [
+          "#0e1217",
+          "#25292f",
+          "#3e4349",
+          "#5f646a",
+          "#81878d",
+          "#a6abb2",
+          "#ccd2d9",
+          "#e9eff6"
+        ]
+      },
+      "section-line": {
+        "role": "primary",
+        "displayName": "Section Line Ink",
+        "canonical": "oklch(20.7% 0.012 254)",
+        "tonalRamp": [
+          "#0e1217",
+          "#25292f",
+          "#3e4349",
+          "#5f646a",
+          "#81878d",
+          "#a6abb2",
+          "#ccd2d9",
+          "#e9eff6"
+        ]
+      },
+      "accent": {
+        "role": "secondary",
+        "displayName": "Instrument Blue",
+        "canonical": "oklch(43.6% 0.160 266)",
+        "tonalRamp": [
+          "#040d32",
+          "#122458",
+          "#243c82",
+          "#3b5cb7",
+          "#5e81dc",
+          "#89a9f4",
+          "#b6d0ff",
+          "#daeeff"
+        ]
+      },
+      "bed-1": {
+        "role": "tertiary",
+        "displayName": "Carboniferous Teal",
+        "canonical": "oklch(54.9% 0.071 176)",
+        "tonalRamp": [
+          "#001611",
+          "#0c3028",
+          "#1e4c41",
+          "#347062",
+          "#5a9385",
+          "#89b6aa",
+          "#b7dad0",
+          "#dbf5ee"
+        ]
+      },
+      "bed-2": {
+        "role": "tertiary",
+        "displayName": "Permian Red-Brown",
+        "canonical": "oklch(53.7% 0.152 33)",
+        "tonalRamp": [
+          "#290100",
+          "#4d1006",
+          "#732415",
+          "#a43c29",
+          "#cb634e",
+          "#e8907e",
+          "#ffbdae",
+          "#ffe0d4"
+        ]
+      },
+      "bed-3": {
+        "role": "tertiary",
+        "displayName": "Triassic Violet",
+        "canonical": "oklch(47.9% 0.142 315)",
+        "tonalRamp": [
+          "#1c0625",
+          "#391845",
+          "#572d69",
+          "#7f4896",
+          "#a36dba",
+          "#c497d7",
+          "#e5c2f5",
+          "#fee3ff"
+        ]
+      },
+      "bed-4": {
+        "role": "tertiary",
+        "displayName": "Jurassic Blue",
+        "canonical": "oklch(55.6% 0.097 220)",
+        "tonalRamp": [
+          "#00161f",
+          "#002f3d",
+          "#004b5d",
+          "#046f87",
+          "#3f92ab",
+          "#77b6ca",
+          "#abdaea",
+          "#d2f6ff"
+        ]
+      },
+      "bed-1-fill": {
+        "role": "tertiary",
+        "displayName": "Carboniferous Teal Fill",
+        "canonical": "oklch(87.6% 0.030 175)",
+        "tonalRamp": [
+          "#0b1411",
+          "#202c28",
+          "#364642",
+          "#536962",
+          "#768c85",
+          "#9eafaa",
+          "#c7d5d0",
+          "#e6f1ee"
+        ]
+      },
+      "bed-2-fill": {
+        "role": "tertiary",
+        "displayName": "Permian Fill",
+        "canonical": "oklch(87.8% 0.046 38)",
+        "tonalRamp": [
+          "#1a0e0b",
+          "#35241f",
+          "#533c35",
+          "#795b52",
+          "#9d7e74",
+          "#bfa49c",
+          "#e1ccc5",
+          "#fbeae5"
+        ]
+      },
+      "bed-3-fill": {
+        "role": "tertiary",
+        "displayName": "Triassic Fill",
+        "canonical": "oklch(86.5% 0.042 315)",
+        "tonalRamp": [
+          "#150f18",
+          "#2e2532",
+          "#493e4e",
+          "#6c5d73",
+          "#8f8096",
+          "#b2a5b8",
+          "#d7cddc",
+          "#f3ebf7"
+        ]
+      },
+      "bed-4-fill": {
+        "role": "tertiary",
+        "displayName": "Jurassic Fill",
+        "canonical": "oklch(90.3% 0.038 216)",
+        "tonalRamp": [
+          "#081416",
+          "#1c2c30",
+          "#31464c",
+          "#4c6970",
+          "#708c93",
+          "#98b0b6",
+          "#c3d5da",
+          "#e3f1f5"
+        ]
+      },
+      "contour": {
+        "role": "tertiary",
+        "displayName": "Topographic Brown",
+        "canonical": "oklch(56.2% 0.096 55)",
+        "tonalRamp": [
+          "#200b00",
+          "#3e2008",
+          "#5f3719",
+          "#8a552d",
+          "#ae7852",
+          "#cea081",
+          "#edc9b1",
+          "#ffe8d5"
+        ]
+      },
+      "contour-label": {
+        "role": "tertiary",
+        "displayName": "Contour Lettering Brown",
+        "canonical": "oklch(46.1% 0.087 55)",
+        "tonalRamp": [
+          "#1f0c01",
+          "#3c210d",
+          "#5d381e",
+          "#865634",
+          "#ab7a58",
+          "#cba185",
+          "#ebcab4",
+          "#ffe9d8"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Survey Paper",
+        "canonical": "oklch(96.8% 0.002 165)",
+        "tonalRamp": [
+          "#111211",
+          "#282928",
+          "#414342",
+          "#626463",
+          "#858786",
+          "#a9abaa",
+          "#cfd1d0",
+          "#edefee"
+        ]
+      },
+      "paper-raised": {
+        "role": "neutral",
+        "displayName": "Map-Face Paper",
+        "canonical": "oklch(99.0% 0.002 146)",
+        "tonalRamp": [
+          "#111211",
+          "#282928",
+          "#424342",
+          "#636363",
+          "#858685",
+          "#aaabaa",
+          "#d0d1d0",
+          "#eeefee"
+        ]
+      },
+      "paper-sunk": {
+        "role": "neutral",
+        "displayName": "Sheet Margin Grey",
+        "canonical": "oklch(93.6% 0.005 165)",
+        "tonalRamp": [
+          "#101211",
+          "#272a28",
+          "#404342",
+          "#616462",
+          "#838785",
+          "#a8acaa",
+          "#ced2d0",
+          "#ebefed"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Secondary Ink",
+        "canonical": "oklch(41.5% 0.020 245)",
+        "tonalRamp": [
+          "#0a131a",
+          "#212a32",
+          "#3a444c",
+          "#5a656e",
+          "#7d8892",
+          "#a1acb7",
+          "#c7d3dd",
+          "#e4f0fb"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Tertiary Ink",
+        "canonical": "oklch(51.5% 0.018 242)",
+        "tonalRamp": [
+          "#0b1319",
+          "#212a31",
+          "#3a444b",
+          "#5b656d",
+          "#7d8890",
+          "#a2acb5",
+          "#c7d3dc",
+          "#e5f0fa"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(83.5% 0.010 172)",
+        "tonalRamp": [
+          "#0d1311",
+          "#242a28",
+          "#3d4442",
+          "#5e6562",
+          "#818885",
+          "#a5adaa",
+          "#cbd3d0",
+          "#e8f1ee"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "oklch(67.4% 0.012 176)",
+        "tonalRamp": [
+          "#0c1311",
+          "#232b29",
+          "#3c4542",
+          "#5c6663",
+          "#7f8986",
+          "#a3adaa",
+          "#c9d4d1",
+          "#e6f1ee"
+        ]
+      },
+      "accent-ink": {
+        "role": "secondary",
+        "displayName": "Paper White on Accent",
+        "canonical": "#ffffff"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The one page title; 2.75–4rem clamp at ≥1100px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles, max about 22ch."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Row and note headings in key tables."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "One sentence under a title, ink-2."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, 58–62ch."
+      },
+      "body-sm": {
+        "displayName": "Body small",
+        "purpose": "Notes, key entries, title-block cells, small controls."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Tracked map lettering: key title, title-block field names, metadata line, field labels."
+      },
+      "measure": {
+        "displayName": "Measure",
+        "purpose": "JetBrains Mono, tabular: every value, coordinate, formula and key letter. Never prose."
+      }
+    },
+    "shadows": [],
+    "strokes": [
+      {
+        "name": "frame",
+        "value": "1px solid var(--ink)",
+        "purpose": "Neatlines, region boundaries, control borders."
+      },
+      {
+        "name": "hairline",
+        "value": "1px solid var(--rule)",
+        "purpose": "Row separators inside keys and notes."
+      },
+      {
+        "name": "field",
+        "value": "1px solid var(--rule-strong)",
+        "purpose": "Input and select borders."
+      },
+      {
+        "name": "focus",
+        "value": "outline: 2px solid var(--accent); outline-offset: 3px",
+        "purpose": "Focus ring on every control (0 offset on inputs)."
+      },
+      {
+        "name": "lettering-halo",
+        "value": "paint-order: stroke; stroke: var(--paper-raised); stroke-width: 3px; stroke-linejoin: round",
+        "purpose": "Knockout behind lettering on drawings (4px on the stereonet)."
+      },
+      {
+        "name": "preview-dash",
+        "value": "stroke-dasharray: 3 4; opacity: 0.55",
+        "purpose": "Construction shown before it commits."
+      },
+      {
+        "name": "section-dash",
+        "value": "stroke-dasharray: 7 4; stroke-width: 1.3",
+        "purpose": "Section line X–Y on the map face."
+      }
+    ],
+    "sheetFrame": [
+      {
+        "name": "sheet-margin",
+        "value": "10px / 18px ≥720px / 24px ≥1100px"
+      },
+      {
+        "name": "bar",
+        "value": "3px / 6px ≥720px"
+      },
+      {
+        "name": "bar-segment",
+        "value": "48px"
+      },
+      {
+        "name": "gutter",
+        "value": "16px / 32px ≥720px / 48px ≥1100px"
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Default for state changes and reveals."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Lines being ruled in, section growing from X to Y."
+      },
+      {
+        "name": "t-fast",
+        "value": "160ms",
+        "purpose": "Hover, colour and border changes."
+      },
+      {
+        "name": "t-med",
+        "value": "280ms",
+        "purpose": "Panel reveals (mobile nav)."
+      },
+      {
+        "name": "press",
+        "value": "transform: scale(0.97) 120ms",
+        "purpose": "Button press."
+      },
+      {
+        "name": "construction-reveal",
+        "value": "opacity 360ms; marks scale-in 420ms staggered 28ms; rule-in 640ms staggered 70ms; section clip 900ms",
+        "purpose": "Step-by-step construction on drawings; disabled under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "380px"
+      },
+      {
+        "name": "sm",
+        "value": "520px"
+      },
+      {
+        "name": "readout-stack",
+        "value": "600px"
+      },
+      {
+        "name": "md",
+        "value": "720px"
+      },
+      {
+        "name": "lg",
+        "value": "900px"
+      },
+      {
+        "name": "nav",
+        "value": "960px"
+      },
+      {
+        "name": "xl",
+        "value": "1100px"
+      }
+    ],
+    "lithologyPatterns": [
+      {
+        "name": "pat-1",
+        "bed": "bed-1",
+        "lithology": "limestone",
+        "value": "brick: 16×10 tile, ink 0.38 opacity, 0.8 stroke"
+      },
+      {
+        "name": "pat-2",
+        "bed": "bed-2",
+        "lithology": "shale",
+        "value": "offset dashes: 14×6 tile, ink 0.42"
+      },
+      {
+        "name": "pat-3",
+        "bed": "bed-3",
+        "lithology": "sandstone",
+        "value": "stipple: 10×10 tile, r 0.75 dots, ink 0.45"
+      },
+      {
+        "name": "pat-4",
+        "bed": "bed-4",
+        "lithology": "conglomerate",
+        "value": "pebbles: 16×14 tile, open circles r 2.2/1.6 + dot, ink 0.42"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink-filled square control; one per region (Load your map, Open workspace).",
+      "html": "<button class=\"ds-btn ds-btn-primary\" type=\"button\">Open workspace</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 24px;border:1px solid var(--ink,#14181d);border-radius:0;font-family:var(--font-sans,\"Golos Text\",system-ui,sans-serif);font-size:1.0625rem;font-weight:560;line-height:1;cursor:pointer;transition:background-color 160ms cubic-bezier(0.23,1,0.32,1),color 160ms cubic-bezier(0.23,1,0.32,1),transform 120ms cubic-bezier(0.23,1,0.32,1);} .ds-btn-primary{background:var(--ink,#14181d);color:var(--paper,#f3f5f4);} .ds-btn-primary:hover{background:#2a3139;} .ds-btn:focus-visible{outline:2px solid var(--accent,#2847a8);outline-offset:3px;} .ds-btn:active{transform:scale(0.97);}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ink-outlined square control for the second action.",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">How it works</button>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;min-height:44px;padding:0 24px;border:1px solid var(--ink,#14181d);border-radius:0;background:transparent;color:var(--ink,#14181d);font-family:var(--font-sans,\"Golos Text\",system-ui,sans-serif);font-size:1.0625rem;font-weight:560;line-height:1;cursor:pointer;transition:background-color 160ms cubic-bezier(0.23,1,0.32,1),transform 120ms cubic-bezier(0.23,1,0.32,1);} .ds-btn-secondary:hover{background:var(--paper-sunk,#e7ebe9);} .ds-btn-secondary:focus-visible{outline:2px solid var(--accent,#2847a8);outline-offset:3px;} .ds-btn-secondary:active{transform:scale(0.97);}"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "chip",
+      "refersTo": "segment",
+      "description": "Language, construction steps and workspace modes; pressed segment is ink-filled.",
+      "html": "<div class=\"ds-seg\" role=\"group\" aria-label=\"Language\"><button type=\"button\" aria-pressed=\"true\">EN</button><button type=\"button\" aria-pressed=\"false\">RU</button></div>",
+      "css": ".ds-seg{display:inline-flex;border:1px solid var(--ink,#14181d);} .ds-seg button{min-width:40px;min-height:34px;padding:0 12px;border:0;border-left:1px solid var(--ink,#14181d);border-radius:0;background:transparent;color:var(--ink,#14181d);font-family:var(--font-sans,\"Golos Text\",system-ui,sans-serif);font-size:0.875rem;font-weight:560;cursor:pointer;transition:background-color 160ms cubic-bezier(0.23,1,0.32,1),color 160ms cubic-bezier(0.23,1,0.32,1);} .ds-seg button:first-child{border-left:0;} .ds-seg button[aria-pressed=\"true\"]{background:var(--ink,#14181d);color:var(--paper,#f3f5f4);} .ds-seg button:not([aria-pressed=\"true\"]):hover{background:var(--paper-sunk,#e7ebe9);} .ds-seg button:focus-visible{outline:2px solid var(--accent,#2847a8);outline-offset:3px;}"
+    },
+    {
+      "name": "Measurement Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Tracked-caps label over a square mono input for bearings, dips and lengths.",
+      "html": "<label class=\"ds-field\"><span>Strike °</span><input class=\"ds-input\" inputmode=\"numeric\" value=\"002\"></label>",
+      "css": ".ds-field{display:grid;gap:4px;font-family:var(--font-sans,\"Golos Text\",system-ui,sans-serif);} .ds-field>span{font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-2,#434d56);} .ds-input{width:100%;min-height:44px;padding:0 12px;border:1px solid var(--rule-strong,#8f9996);border-radius:0;background:var(--paper-raised,#fbfcfb);color:var(--ink,#14181d);font-family:var(--font-mono,\"JetBrains Mono\",ui-monospace,monospace);font-size:1rem;font-variant-numeric:tabular-nums;caret-color:var(--accent,#2847a8);transition:border-color 160ms cubic-bezier(0.23,1,0.32,1);} .ds-input:focus-visible{outline:2px solid var(--accent,#2847a8);outline-offset:0;border-color:var(--accent,#2847a8);} .ds-input[aria-invalid=\"true\"]{border-color:var(--bed-2,#b5432e);}"
+    },
+    {
+      "name": "Masthead Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Title strip: wordmark, ink-2 links, language control, small primary button, closed by an ink rule.",
+      "html": "<header class=\"ds-mast\"><a class=\"ds-brand\" href=\"#\"><svg viewBox=\"0 0 28 28\" width=\"28\" height=\"28\" aria-hidden=\"true\"><path d=\"M3 10H25M14 10V19\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"square\"/><path d=\"M3 22.5H25\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"2 2\"/></svg><span>Strikeline</span></a><nav><a href=\"#\">How it works</a><a href=\"#\">Workspace</a><a href=\"#\">Stereonet</a></nav></header>",
+      "css": ".ds-mast{display:flex;align-items:center;gap:16px;padding:12px 32px;border-bottom:1px solid var(--ink,#14181d);font-family:var(--font-sans,\"Golos Text\",system-ui,sans-serif);color:var(--ink,#14181d);} .ds-brand{display:inline-flex;align-items:center;gap:8px;margin-right:auto;color:inherit;text-decoration:none;font-size:1.1875rem;font-weight:700;letter-spacing:-0.02em;} .ds-mast nav{display:flex;gap:4px;} .ds-mast nav a{display:inline-flex;align-items:center;min-height:40px;padding:0 12px;font-size:0.875rem;font-weight:520;color:var(--ink-2,#434d56);text-decoration:none;transition:color 160ms cubic-bezier(0.23,1,0.32,1);} .ds-mast nav a:hover{color:var(--ink,#14181d);background:var(--paper-sunk,#e7ebe9);} .ds-mast a:focus-visible{outline:2px solid var(--accent,#2847a8);outline-offset:3px;}"
+    },
+    {
+      "name": "Keyed Notes",
+      "kind": "card",
+      "refersTo": "key-tag",
+      "description": "The card replacement: rows under an ink rule, keyed A–D to a drawing, hairline separators.",
+      "html": "<ol class=\"ds-keyed\"><li><span class=\"ds-tag\">A</span><div><h3>Map</h3><p>Load the map, set the scale, mark points and fit structure contours.</p></div></li><li><span class=\"ds-tag\">B</span><div><h3>Cross-section</h3><p>Built from the section line at the map’s scale.</p></div></li></ol>",
+      "css": ".ds-keyed{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink,#14181d);font-family:var(--font-sans,\"Golos Text\",system-ui,sans-serif);color:var(--ink,#14181d);} .ds-keyed li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--rule,#c3cbc8);} .ds-tag{display:inline-grid;place-items:center;width:22px;height:20px;margin-top:3px;background:var(--ink,#14181d);color:var(--paper,#f3f5f4);font-family:var(--font-mono,\"JetBrains Mono\",monospace);font-size:12px;font-weight:700;} .ds-keyed h3{margin:0 0 4px;font-size:1.25rem;font-weight:650;line-height:1.08;letter-spacing:-0.015em;} .ds-keyed p{margin:0;font-size:0.875rem;line-height:1.5;color:var(--ink-2,#434d56);}"
+    },
+    {
+      "name": "Map Key Entry",
+      "kind": "custom",
+      "refersTo": "map-key",
+      "description": "Bed swatch read three ways (stroke, fill, lithology pattern) beside its name.",
+      "html": "<ul class=\"ds-key\"><li><svg viewBox=\"0 0 36 20\" width=\"36\" height=\"20\" aria-hidden=\"true\"><defs><pattern id=\"ds-pat-2\" width=\"14\" height=\"6\" patternUnits=\"userSpaceOnUse\"><path d=\"M1 1.5H7M8 4.5H13\" fill=\"none\" stroke=\"#14181d\" stroke-opacity=\".42\" stroke-width=\".8\"/></pattern></defs><rect x=\".5\" y=\".5\" width=\"35\" height=\"19\" fill=\"#f3cdc1\" stroke=\"#b5432e\"/><rect x=\".5\" y=\".5\" width=\"35\" height=\"19\" fill=\"url(#ds-pat-2)\"/></svg><span>Shale</span></li><li><svg viewBox=\"0 0 36 20\" width=\"36\" height=\"20\" aria-hidden=\"true\"><path d=\"M2 10H34\" stroke=\"#14181d\" stroke-width=\"1.2\" stroke-dasharray=\"5 3\"/></svg><span>Section line X–Y</span></li></ul>",
+      "css": ".ds-key{list-style:none;margin:0;padding:16px 0 0;border-top:1px solid var(--ink,#14181d);display:grid;gap:8px;font-family:var(--font-sans,\"Golos Text\",system-ui,sans-serif);font-size:0.875rem;color:var(--ink,#14181d);} .ds-key li{display:flex;align-items:center;gap:12px;line-height:1.3;}"
+    },
+    {
+      "name": "Sheet Note",
+      "kind": "custom",
+      "refersTo": "sheet-note",
+      "description": "Status printed as a margin note under its control; bed-2 on error. Never a toast.",
+      "html": "<div class=\"ds-notes\"><p class=\"ds-note\" role=\"status\">PNG, JPG or a screenshot of the PDF. Your map stays on your device.</p><p class=\"ds-note ds-note-error\" role=\"status\">That file is not an image. Try a PNG or JPG.</p></div>",
+      "css": ".ds-notes{display:grid;gap:12px;} .ds-note{margin:0;font-family:var(--font-sans,\"Golos Text\",system-ui,sans-serif);font-size:0.875rem;line-height:1.5;color:var(--ink-2,#434d56);} .ds-note-error{color:var(--bed-2,#b5432e);}"
+    },
+    {
+      "name": "Graduated Neatline Frame",
+      "kind": "custom",
+      "refersTo": "sheet",
+      "description": "The sheet frame: outer ink neatline, alternating ink/paper bar, inner neatline.",
+      "html": "<div class=\"ds-sheet\"><div class=\"ds-sheet-in\">Map sheet content</div></div>",
+      "css": ".ds-sheet{--seg:48px;--bar:6px;position:relative;margin:18px;padding:calc(var(--bar) + 1px);border:1px solid #14181d;background:repeating-linear-gradient(90deg,#14181d 0 var(--seg),#f3f5f4 var(--seg) calc(var(--seg)*2)) top/100% var(--bar) no-repeat,repeating-linear-gradient(90deg,#f3f5f4 0 var(--seg),#14181d var(--seg) calc(var(--seg)*2)) bottom/100% var(--bar) no-repeat,repeating-linear-gradient(180deg,#14181d 0 var(--seg),#f3f5f4 var(--seg) calc(var(--seg)*2)) left/var(--bar) 100% no-repeat,repeating-linear-gradient(180deg,#f3f5f4 0 var(--seg),#14181d var(--seg) calc(var(--seg)*2)) right/var(--bar) 100% no-repeat,#f3f5f4;} .ds-sheet::before{content:\"\";position:absolute;inset:var(--bar);border:1px solid #14181d;pointer-events:none;} .ds-sheet-in{position:relative;padding:32px;font-family:var(--font-sans,\"Golos Text\",system-ui,sans-serif);color:#14181d;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Survey Map Sheet",
+    "overview": "Every Strikeline surface is a sheet from a geological survey: cool paper, blue-black ink, a graduated neatline around the whole page, and a margin with a key, an index and a title block. The interface is the map and its marginalia. It is not a SaaS page with a map placed on it. Colour comes from geology (ICS bed colours, brown contours), and the hairline drawing does the rest. The density is that of a printed sheet: generous sheet margins, tight 1px rules inside, and every number set in mono next to the mark it came from.\n\nThe system is strict and quiet. It meets the brand commitment to modern minimalism, a strict corporate feel and an easy-to-learn interface by holding to drafting conventions, not by adding ornament. Planes are flat, corners are square, and state is shown with ink fill. Constructions are previewed as dashes and then ruled in solid. Content is grouped as keyed rows under a rule, never as floating cards.\n\nThe workspace (app.html) inherits the sheet as its frame. Fixed regions (map, section, stereonet, tables) stay in place and their contents change. Status prints as a sheet note in the margin, not as a toast.",
+    "keyCharacteristics": [
+      "Graduated neatline frame (ink/paper bar between two 1px ink neatlines) around every page.",
+      "Cool paper and blue-black ink; ICS bed colours and brown contours are the only saturated colours, plus one instrument blue for focus and calibration.",
+      "Golos Text set like map lettering; JetBrains Mono for measurements only.",
+      "Square corners, 1px rules, no shadows.",
+      "Keyed notes and key tables in place of cards.",
+      "Every bed reads three ways: stroke colour, pale fill and lithology pattern."
+    ],
+    "rules": [
+      {
+        "name": "The Geology Colours Rule",
+        "body": "Saturated hues mean a bed, a contour or the instrument. A bed colour always marks that bed, everywhere (map, section, net, legend, table). It is never used as decoration, a status colour or a brand accent. The one exception is the error note, which uses bed-2 red-brown.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Fill Rule",
+        "body": "Selected, pressed and primary all mean ink fill with paper lettering. No tinted selection states and no accent-filled buttons.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three-Way Bed Rule",
+        "body": "Every bed reads three ways: stroke colour, pale fill and lithology pattern (pat-1 brick, pat-2 dash, pat-3 stipple, pat-4 pebble, ink at about 40% opacity). Hue is never the only cue. Colour-blind students use this tool.",
+        "section": "colors"
+      },
+      {
+        "name": "The Measurement Rule",
+        "body": "Mono is for values only: lengths, bearings, elevations, trend/plunge, formulas, field inputs. Prose, buttons, headings and labels are never set in mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lettering Rule",
+        "body": "Lettering on drawings is Golos/Mono at 13–15px, 600–700 weight, with a 3px paper-raised halo (`paint-order: stroke`) so it stays readable over linework.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "Nothing lifts off the paper. A region is separated by a rule or a tone, never by a shadow, blur or overlay glow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Neatline Rule",
+        "body": "The graduated ink/paper bar frames the sheet only. It is a map-sheet border, not a divider, progress bar or decorative stripe inside content.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Dashed Preview Rule",
+        "body": "A line is shown dashed before it commits and solid after. Dashes never decorate.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** frame every page with the graduated neatline (3px/6px bar, 48px segments, 1px ink neatlines both sides).",
+      "**Do** mark selection and pressed state with ink fill and paper lettering.",
+      "**Do** carry each bed as colour + fill + lithology pattern, and keep one colour per bed across map, section, net, legend and table.",
+      "**Do** set every measurement in JetBrains Mono with tabular numerals, next to or leadered to its mark.",
+      "**Do** group content as keyed rows under a 1px ink rule with hairline separators.",
+      "**Do** show a construction dashed before it commits, and solid after.",
+      "**Do** print status as a sheet note under its control, bed-2 for errors.",
+      "**Do** use contour-label (not contour) for contour elevations."
+    ],
+    "donts": [
+      "**Don't** add border radius, box shadows, blur or glows to any control or region.",
+      "**Don't** use bed colours or contour brown for decoration, branding or generic status.",
+      "**Don't** set prose, headings, buttons or labels in mono.",
+      "**Don't** box content into cards; use key tables and keyed notes.",
+      "**Don't** use the graduated bar anywhere but the sheet frame.",
+      "**Don't** fill selected states with the accent blue; accent is for focus, caret and calibration marks."
+    ]
+  }
+}

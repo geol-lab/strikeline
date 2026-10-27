@@ -1,0 +1,6 @@
+# Preview build and design-review captures (local only)
+dist/
+.impeccable/review/
+.impeccable/build/
+.impeccable/mocks/
+__pycache__/

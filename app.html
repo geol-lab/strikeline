@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Strikeline workspace</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body class="app">
+  <!-- ===== Title strip: brand, tabs, project actions, language ===== -->
+  <header class="app-bar">
+    <a class="brand" href="index.html" aria-label="Strikeline home">
+      <svg class="brand__mark" viewBox="0 0 28 28" aria-hidden="true">
+        <path d="M3 10H25M14 10V19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/>
+        <path d="M3 22.5H25" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+      </svg>
+      <span class="brand__name">Strikeline</span>
+    </a>
+
+    <nav class="tabs" role="tablist" aria-label="Workspace" data-i18n-attr="aria-label:app.tabs">
+      <button role="tab" id="tab-map" aria-controls="panel-map" aria-selected="true" data-tab="map"><span class="key-tag">A</span><span data-i18n="ws.map.t">Map</span></button>
+      <button role="tab" id="tab-section" aria-controls="panel-section" aria-selected="false" data-tab="section" tabindex="-1"><span class="key-tag">B</span><span data-i18n="ws.sec.t">Cross-section</span></button>
+      <button role="tab" id="tab-net" aria-controls="panel-net" aria-selected="false" data-tab="net" tabindex="-1"><span class="key-tag">C</span><span data-i18n="ws.net.t">Stereonet</span></button>
+      <button role="tab" id="tab-tables" aria-controls="panel-tables" aria-selected="false" data-tab="tables" tabindex="-1"><span class="key-tag">D</span><span data-i18n="ws.tab.t">Tables and legends</span></button>
+    </nav>
+
+    <div class="app-bar__tools">
+      <details class="menu" id="file-menu">
+        <summary class="btn btn--small" data-i18n="file.menu">File</summary>
+        <div class="menu__list" role="menu">
+          <label class="menu__item file-btn" role="menuitem"><span data-i18n="file.open">Open project…</span><input type="file" id="open-project" accept=".json,application/json"></label>
+          <button type="button" class="menu__item" role="menuitem" id="save-project" data-i18n="file.save">Save project file</button>
+          <hr>
+          <button type="button" class="menu__item" role="menuitem" id="export-map" data-i18n="file.exportMap">Export map with marks (PNG)</button>
+          <button type="button" class="menu__item" role="menuitem" id="export-section" data-i18n="file.exportSection">Export cross-section (SVG)</button>
+          <button type="button" class="menu__item" role="menuitem" id="export-column" data-i18n="file.exportColumn">Export column and legend (SVG)</button>
+        </div>
+      </details>
+      <button type="button" class="btn btn--small btn--quiet" id="undo" data-i18n-attr="title:app.undo" title="Undo (Ctrl+Z)">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5 3 9l4 4M3.5 9H12a5 5 0 0 1 0 10h-2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span class="visually-hidden" data-i18n="app.undo">Undo</span>
+      </button>
+      <button type="button" class="btn btn--small btn--quiet" id="redo" data-i18n-attr="title:app.redo" title="Redo (Ctrl+Shift+Z)">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m13 5 4 4-4 4M16.5 9H8a5 5 0 0 0 0 10h2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span class="visually-hidden" data-i18n="app.redo">Redo</span>
+      </button>
+      <div class="seg lang" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== A — Map: tools | map + section | panel ===== -->
+  <main class="tab-panel" id="panel-map" role="tabpanel" aria-labelledby="tab-map">
+    <div class="tools" role="toolbar" aria-label="Tools" data-i18n-attr="aria-label:app.tools">
+      <button type="button" class="tool" data-tool="pan" aria-pressed="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18M12 3 9.5 5.5M12 3l2.5 2.5M12 21l-2.5-2.5M12 21l2.5-2.5M3 12l2.5-2.5M3 12l2.5 2.5M21 12l-2.5-2.5M21 12l-2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span data-i18n="tool.pan">Move</span><kbd>H</kbd>
+      </button>
+      <button type="button" class="tool" data-tool="scale" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15h18M3 15h6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 15h6" stroke="currentColor" stroke-width="4"/><path d="M3 10v9M21 10v9" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span data-i18n="tool.scale">Scale</span><kbd>S</kbd>
+      </button>
+      <button type="button" class="tool" data-tool="section" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/><circle cx="3.5" cy="12" r="2" fill="currentColor"/><circle cx="20.5" cy="12" r="2" fill="currentColor"/></svg>
+        <span data-i18n="tool.section">Section X–Y</span><kbd>X</kbd>
+      </button>
+      <button type="button" class="tool" data-tool="point" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17c5-9 11 2 18-7" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/><path d="M12 3v18" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12.6" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        <span data-i18n="tool.point">Marker</span><kbd>M</kbd>
+      </button>
+      <button type="button" class="tool" data-tool="ground" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/><path d="m12 8 4 7H8z" fill="currentColor"/></svg>
+        <span data-i18n="tool.ground">Ground</span><kbd>G</kbd>
+      </button>
+      <button type="button" class="tool" data-tool="erase" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span data-i18n="tool.erase">Erase</span><kbd>E</kbd>
+      </button>
+    </div>
+
+    <div class="stage-col">
+      <div class="map-wrap">
+        <div class="viewport" id="viewport" tabindex="0" aria-label="Map" data-i18n-attr="aria-label:app.mapLabel">
+          <div class="stage" id="stage">
+            <svg id="overlay" class="overlay" aria-hidden="true"></svg>
+          </div>
+        </div>
+        <div class="zoom" role="group" aria-label="Zoom" data-i18n-attr="aria-label:app.zoom">
+          <button type="button" class="btn btn--small" id="zoom-out" aria-label="Zoom out">−</button>
+          <button type="button" class="btn btn--small num" id="zoom-fit" data-i18n-attr="title:app.fit" title="Fit map">100%</button>
+          <button type="button" class="btn btn--small" id="zoom-in" aria-label="Zoom in">+</button>
+        </div>
+        <p class="sheet-note" id="note" role="status" aria-live="polite"></p>
+      </div>
+
+      <section class="section-wrap" aria-labelledby="sec-title">
+        <header class="section-wrap__head">
+          <h2 id="sec-title" class="label" data-i18n="ws.sec.t">Cross-section</h2>
+          <span class="section-wrap__meta num" id="sec-meta"></span>
+          <label class="ve">
+            <span data-i18n="app.ve">Vertical exaggeration</span>
+            <input class="input input--tiny" id="ve" type="number" min="0.5" max="10" step="0.5" value="1" inputmode="decimal">
+          </label>
+        </header>
+        <div class="section-scroll" id="section-scroll">
+          <svg id="section-svg" class="section-svg" role="img" aria-labelledby="sec-title"></svg>
+        </div>
+        <p class="sheet-note sheet-note--quiet" id="sec-note"></p>
+      </section>
+    </div>
+
+    <aside class="panel" aria-label="Project" data-i18n-attr="aria-label:app.project">
+      <!-- Map file -->
+      <section class="panel__block">
+        <h2 class="label" data-i18n="app.mapFile">Map</h2>
+        <p class="panel__map-name" id="map-name">—</p>
+        <div class="panel__row">
+          <label class="btn btn--small file-btn">
+            <span data-i18n="hero.load">Load your map</span>
+            <input type="file" id="file" accept="image/*">
+          </label>
+          <button type="button" class="btn btn--small btn--quiet" id="load-sample" data-i18n="app.sample">Practice map</button>
+        </div>
+      </section>
+
+      <!-- Scale -->
+      <section class="panel__block">
+        <h2 class="label" data-i18n="tool.scale">Scale</h2>
+        <div class="panel__row">
+          <label class="field field--inline">
+            <span data-i18n="app.barLen">Scale bar, m</span>
+            <input class="input" id="bar-len" type="number" min="1" step="1" value="500" inputmode="numeric">
+          </label>
+        </div>
+        <p class="panel__value num" id="scale-out" data-empty="true"></p>
+      </section>
+
+      <!-- Marker: elevation -->
+      <section class="panel__block">
+        <h2 class="label" data-i18n="app.elevation">Elevation of the next mark</h2>
+        <div class="stepper">
+          <button type="button" class="btn btn--small" id="elev-down" aria-label="Lower by one interval">−</button>
+          <input class="input" id="elev" type="number" step="10" value="300" inputmode="numeric" aria-label="Elevation, m">
+          <button type="button" class="btn btn--small" id="elev-up" aria-label="Raise by one interval">+</button>
+          <span class="stepper__unit">m</span>
+        </div>
+        <label class="field field--inline">
+          <span data-i18n="app.interval">Contour interval, m</span>
+          <input class="input" id="interval" type="number" min="1" step="1" value="100" inputmode="numeric">
+        </label>
+      </section>
+
+      <!-- Beds -->
+      <section class="panel__block">
+        <div class="panel__head">
+          <h2 class="label" data-i18n="app.beds">Beds and contacts</h2>
+          <button type="button" class="btn btn--small btn--quiet" id="add-bed" data-i18n="app.addBed">Add bed</button>
+        </div>
+        <ul class="beds" id="beds"></ul>
+      </section>
+
+      <!-- Structure contours -->
+      <section class="panel__block">
+        <h2 class="label" data-i18n="app.lines">Structure contours</h2>
+        <div class="table-scroll">
+          <table class="lines-table" id="lines-table"></table>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <!-- ===== B — Cross-section, full width ===== -->
+  <section class="tab-panel" id="panel-section" role="tabpanel" aria-labelledby="tab-section" hidden>
+    <div class="sheet-tab">
+      <header class="sheet-tab__head">
+        <h2 data-i18n="secTab.title">Cross-section X–Y</h2>
+        <span class="section-wrap__meta num" id="secb-meta"></span>
+        <label class="ve">
+          <span data-i18n="app.ve">Vertical exaggeration</span>
+          <input class="input input--tiny" id="ve-b" type="number" min="0.5" max="10" step="0.5" value="1" inputmode="decimal">
+        </label>
+      </header>
+      <div class="section-plate" id="secb-scroll">
+        <svg id="secb-svg" class="section-svg" role="img" aria-labelledby="secb-desc"><desc id="secb-desc" data-i18n="secTab.desc">Cross-section along X–Y at the map's horizontal scale.</desc></svg>
+      </div>
+      <p class="sheet-note sheet-note--quiet" id="secb-note"></p>
+      <div class="sheet-tab__grid">
+        <section>
+          <h3 class="label" data-i18n="secTab.key">Key</h3>
+          <ul class="sec-key" id="secb-key"></ul>
+        </section>
+        <section>
+          <h3 class="label" data-i18n="secTab.att">Attitudes along the section</h3>
+          <div class="table-scroll"><table class="lines-table" id="secb-table"></table></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== C — Stereonet ===== -->
+  <section class="tab-panel" id="panel-net" role="tabpanel" aria-labelledby="tab-net" hidden>
+    <div class="net-tab">
+      <figure class="net-tab__figure">
+        <svg id="netw" viewBox="-200 -195 400 390" role="img" aria-labelledby="netw-desc"><desc id="netw-desc" data-i18n="net.desc">Equal-area lower-hemisphere stereonet with two planes and their line of intersection.</desc></svg>
+        <figcaption class="net-tab__caption" data-i18n="netTab.caption">Equal-area net, lower hemisphere. Squares are poles, the dot is the line of intersection.</figcaption>
+      </figure>
+
+      <div class="net-tab__side">
+        <section class="panel__block">
+          <div class="panel__head">
+            <h2 class="label" data-i18n="netTab.planes">Planes</h2>
+            <button type="button" class="btn btn--small btn--quiet" id="add-plane" data-i18n="netTab.add">Add plane</button>
+          </div>
+          <ul class="planes" id="planes"></ul>
+          <label class="switch">
+            <input type="checkbox" id="show-poles" role="switch" checked>
+            <span data-i18n="netTab.poles">Show poles</span>
+          </label>
+        </section>
+
+        <section class="panel__block">
+          <h2 class="label" data-i18n="netTab.inter">Line of intersection</h2>
+          <div class="pair">
+            <label class="field"><span data-i18n="netTab.a">Plane A</span><select class="select" id="pick-a"></select></label>
+            <label class="field"><span data-i18n="netTab.b">Plane B</span><select class="select" id="pick-b"></select></label>
+          </div>
+          <p class="net-tab__result"><output class="num" id="inter-out">—</output> <span class="net__unit" data-i18n="net.unit">trend/plunge</span></p>
+          <p class="net__explain" id="inter-explain"></p>
+          <label class="switch">
+            <input type="checkbox" id="show-on-map" role="switch">
+            <span data-i18n="netTab.onMap">Show this line on the map</span>
+          </label>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== D — Stratigraphic table and legend ===== -->
+  <section class="tab-panel" id="panel-tables" role="tabpanel" aria-labelledby="tab-tables" hidden>
+    <div class="sheet-tab">
+      <header class="sheet-tab__head">
+        <h2 data-i18n="tabD.title">Stratigraphic table</h2>
+        <div class="panel__row">
+          <button type="button" class="btn btn--small" id="col-fill" data-i18n="tabD.fill">Fill from beds</button>
+          <button type="button" class="btn btn--small btn--quiet" id="col-add" data-i18n="tabD.add">Add unit</button>
+        </div>
+      </header>
+      <p class="block__lead tabD__lead" data-i18n="tabD.lead">Youngest at the top. Edit any cell to match the assignment. Thickness from the map is estimated where two contacts share elevations: t = d · sin δ.</p>
+
+      <div class="strat">
+        <div class="table-scroll">
+          <table class="strat-table" id="strat-table"></table>
+        </div>
+        <figure class="strat__column">
+          <svg id="column-svg" role="img" aria-labelledby="column-cap"></svg>
+          <figcaption class="net-tab__caption" id="column-cap" data-i18n="tabD.colCap">Column drawn to the thicknesses in the table; width shows how resistant each rock is.</figcaption>
+        </figure>
+      </div>
+
+      <div class="sheet-tab__grid legend-grid">
+        <section>
+          <div class="panel__head">
+            <h2 class="tabD__h" data-i18n="tabD.legend">Legend</h2>
+            <button type="button" class="btn btn--small btn--quiet" id="legend-reset" data-i18n="tabD.reset">Reset template</button>
+          </div>
+          <label class="field">
+            <span data-i18n="tabD.legendTitle">Legend title</span>
+            <input class="input input--text" id="legend-title">
+          </label>
+          <ul class="legend-items" id="legend-items"></ul>
+        </section>
+        <figure class="legend-preview">
+          <svg id="legend-svg" role="img" aria-labelledby="legend-cap"></svg>
+          <figcaption class="net-tab__caption" id="legend-cap" data-i18n="tabD.legendCap">Legend as it will be exported.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
